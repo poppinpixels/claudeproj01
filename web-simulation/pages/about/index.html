@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Physics Simulation</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="light-mode">
+    <div class="app-container">
+        <!-- Navigation -->
+        <header>
+            <div class="logo">
+                <a href="../../index.html">PhysicsLab</a>
+            </div>
+            <nav>
+                <ul class="desktop-nav">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../tools/index.html">Tool Links</a></li>
+                    <li><a href="../blog/index.html">Blog</a></li>
+                    <li><a href="../ai-tools/index.html">AI Tools</a></li>
+                    <li><a href="index.html" class="active">About</a></li>
+                </ul>
+                <div class="theme-switcher">
+                    <button id="theme-toggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
+                </div>
+                <div class="language-switcher">
+                    <button id="language-toggle" aria-label="Switch language">
+                        <span class="current-lang">EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="language-dropdown">
+                        <a href="index.html" data-lang="en" class="active">English</a>
+                        <a href="index-dk.html" data-lang="dk">Dansk</a>
+                    </div>
+                </div>
+                <button class="hamburger-menu" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </header>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav-overlay">
+            <div class="mobile-nav">
+                <button class="close-menu" aria-label="Close menu">
+                    <i class="fas fa-times"></i>
+                </button>
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../tools/index.html">Tool Links</a></li>
+                    <li><a href="../blog/index.html">Blog</a></li>
+                    <li><a href="../ai-tools/index.html">AI Tools</a></li>
+                    <li><a href="index.html" class="active">About</a></li>
+                </ul>
+                <div class="mobile-nav-footer">
+                    <div class="mobile-theme-switcher">
+                        <span>Theme:</span>
+                        <button id="mobile-theme-toggle" aria-label="Toggle dark mode">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                        </button>
+                    </div>
+                    <div class="mobile-language-switcher">
+                        <span>Language:</span>
+                        <div class="language-buttons">
+                            <button data-lang="en" class="active">EN</button>
+                            <button data-lang="dk">DK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main>
+            <section class="hero">
+                <h1>About PhysicsLab</h1>
+                <p>Learn about our mission and the team behind the interactive physics simulations</p>
+            </section>
+
+            <section class="about-section">
+                <div class="about-container">
+                    <div class="about-content">
+                        <h2>Our Mission</h2>
+                        <p>At PhysicsLab, we're passionate about making physics accessible and engaging for everyone. Our interactive simulations are designed to help visualize complex physical concepts in an intuitive way.</p>
+                        
+                        <p>Our bouncing ball simulation demonstrates principles of:</p>
+                        <ul>
+                            <li>Gravity and acceleration</li>
+                            <li>Conservation of energy</li>
+                            <li>Friction and elasticity</li>
+                            <li>Rotational dynamics</li>
+                            <li>Collision physics</li>
+                        </ul>
+                        
+                        <h2>Technology</h2>
+                        <p>Our simulations are built using modern web technologies including:</p>
+                        <ul>
+                            <li>HTML5 Canvas for rendering</li>
+                            <li>Matter.js physics engine</li>
+                            <li>JavaScript for interactive elements</li>
+                            <li>CSS for responsive design</li>
+                        </ul>
+                        
+                        <h2>Future Development</h2>
+                        <p>We're constantly working to improve our simulations and add new features. Some of our upcoming plans include:</p>
+                        <ul>
+                            <li>Additional physics simulations (pendulums, projectiles, etc.)</li>
+                            <li>Educational content explaining the physics concepts</li>
+                            <li>User accounts to save custom simulation configurations</li>
+                            <li>More interactive elements and parameters to adjust</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="contact-section">
+                        <h2>Contact Us</h2>
+                        <p>Have suggestions or questions about our simulations? We'd love to hear from you!</p>
+                        
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="../../index.html">PhysicsLab</a>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="../../index.html">Home</a></li>
+                            <li><a href="../tools/index.html">Tool Links</a></li>
+                            <li><a href="../blog/index.html">Blog</a></li>
+                            <li><a href="../ai-tools/index.html">AI Tools</a></li>
+                            <li><a href="index.html">About</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <div class="social-links">
+                            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PhysicsLab. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../../js/ui.js"></script>
+</body>
+</html>

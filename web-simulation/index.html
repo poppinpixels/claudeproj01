@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics Simulation</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="light-mode">
+    <div class="app-container">
+        <!-- Navigation -->
+        <header>
+            <div class="logo">
+                <a href="index.html">PhysicsLab</a>
+            </div>
+            <nav>
+                <ul class="desktop-nav">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="pages/tools/index.html">Tool Links</a></li>
+                    <li><a href="pages/blog/index.html">Blog</a></li>
+                    <li><a href="pages/ai-tools/index.html">AI Tools</a></li>
+                    <li><a href="pages/about/index.html">About</a></li>
+                </ul>
+                <div class="theme-switcher">
+                    <button id="theme-toggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
+                </div>
+                <div class="language-switcher">
+                    <button id="language-toggle" aria-label="Switch language">
+                        <span class="current-lang">EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="language-dropdown">
+                        <a href="#" data-lang="en" class="active">English</a>
+                        <a href="#" data-lang="dk">Dansk</a>
+                    </div>
+                </div>
+                <button class="hamburger-menu" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </header>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav-overlay">
+            <div class="mobile-nav">
+                <button class="close-menu" aria-label="Close menu">
+                    <i class="fas fa-times"></i>
+                </button>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="pages/tools/index.html">Tool Links</a></li>
+                    <li><a href="pages/blog/index.html">Blog</a></li>
+                    <li><a href="pages/ai-tools/index.html">AI Tools</a></li>
+                    <li><a href="pages/about/index.html">About</a></li>
+                </ul>
+                <div class="mobile-nav-footer">
+                    <div class="mobile-theme-switcher">
+                        <span>Theme:</span>
+                        <button id="mobile-theme-toggle" aria-label="Toggle dark mode">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                        </button>
+                    </div>
+                    <div class="mobile-language-switcher">
+                        <span>Language:</span>
+                        <div class="language-buttons">
+                            <button data-lang="en" class="active">EN</button>
+                            <button data-lang="dk">DK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main>
+            <section class="hero">
+                <h1>Interactive Physics Simulation</h1>
+                <p>Experiment with balls of different weights bouncing inside a spinning hexagon</p>
+            </section>
+
+            <section class="simulation-container">
+                <div class="simulation-wrapper">
+                    <canvas id="simulation-canvas"></canvas>
+                    <div class="simulation-controls">
+                        <div class="ball-buttons">
+                            <button class="ball-type-btn" data-type="light">
+                                <span class="ball-icon light"></span>
+                                <span class="label">Light</span>
+                            </button>
+                            <button class="ball-type-btn active" data-type="medium">
+                                <span class="ball-icon medium"></span>
+                                <span class="label">Medium</span>
+                            </button>
+                            <button class="ball-type-btn" data-type="heavy">
+                                <span class="ball-icon heavy"></span>
+                                <span class="label">Heavy</span>
+                            </button>
+                            <button class="ball-type-btn" data-type="huge">
+                                <span class="ball-icon huge"></span>
+                                <span class="label">Huge</span>
+                            </button>
+                        </div>
+                        <div class="action-buttons">
+                            <button id="pop-mode-btn">Pop Mode</button>
+                            <button id="reset-btn">Reset</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="simulation-info">
+                    <div id="ball-count">Balls: 6</div>
+                    <div id="current-mode">Mode: Add Balls</div>
+                    <div id="fps">FPS: 60</div>
+                </div>
+                <div class="instruction-text">
+                    <p>Click inside the hexagon to add balls. Switch ball types using the buttons above.</p>
+                    <p>Enter "Pop Mode" to remove balls by clicking on them.</p>
+                </div>
+            </section>
+
+            <section class="features">
+                <h2>Physics Simulation Features</h2>
+                <div class="feature-cards">
+                    <div class="feature-card">
+                        <i class="fas fa-weight-hanging"></i>
+                        <h3>Different Mass Balls</h3>
+                        <p>Experiment with balls of different weights and see how they interact.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-sync-alt"></i>
+                        <h3>Rotating Container</h3>
+                        <p>The hexagonal container rotates continuously for dynamic physics.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-arrows-alt"></i>
+                        <h3>Realistic Physics</h3>
+                        <p>Balls respond to gravity, friction, and collisions realistically.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-hand-pointer"></i>
+                        <h3>Interactive Controls</h3>
+                        <p>Add and remove balls with simple mouse clicks.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html">PhysicsLab</a>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="pages/tools/index.html">Tool Links</a></li>
+                            <li><a href="pages/blog/index.html">Blog</a></li>
+                            <li><a href="pages/ai-tools/index.html">AI Tools</a></li>
+                            <li><a href="pages/about/index.html">About</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <div class="social-links">
+                            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PhysicsLab. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/matter.min.js"></script>
+    <script src="js/simulation.js"></script>
+    <script src="js/ui.js"></script>
+</body>
+</html>
